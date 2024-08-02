@@ -8,16 +8,16 @@ COPY . .
 
 # Install pip dependencies from requirements
 
-RUN pip install -r requirements.txt
+RUN npm install -r requirements.txt
 
 # Set YOUR_NAME environment variable
 
-ENV YOUR_NAME=chris
+ENV YOUR_NAME=Karimah node
 
 # Expose the correct port
 
-EXPOSE 5500
+EXPOSE 3000
 
 # Create an entrypoint
 
-ENTRYPOINT ["python", "app.py"]
+ENTRYPOINT [ "npm", "start" ]
